@@ -1,0 +1,4 @@
+# environment check and tests
+openai>=1.40
+numpy>=1.26
+pytest>=8.0

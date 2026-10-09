@@ -1,0 +1,12 @@
+{"query": "Bảo hành mất bao lâu thì xong?", "gold": "BH-1"}
+{"query": "bao hanh mat bao lau thi xong", "gold": "BH-1"}
+{"query": "Sửa lâu quá có được mượn máy không?", "gold": "BH-2"}
+{"query": "sua lau qua co duoc muon may khong", "gold": "BH-2"}
+{"query": "Máy giặt báo lỗi E21 là bị gì?", "gold": "MG-E21"}
+{"query": "may giat bao loi e21", "gold": "MG-E21"}
+{"query": "Giao hàng miễn phí trong bao nhiêu km?", "gold": "GH-1"}
+{"query": "giao hang mien phi bao nhieu km", "gold": "GH-1"}
+{"query": "Trả góp 0% cho đơn từ bao nhiêu tiền?", "gold": "TG-1"}
+{"query": "tra gop 0% don tu bao nhieu tien", "gold": "TG-1"}
+{"query": "Đổi ý thì phí đổi trả bao nhiêu?", "gold": "DT-1"}
+{"query": "doi y phi doi tra bao nhieu", "gold": "DT-1"}

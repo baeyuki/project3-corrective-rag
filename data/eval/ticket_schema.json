@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Labelled support ticket",
+  "type": "object",
+  "required": ["id", "type", "expected_decision", "ticket", "gold_sections", "key_facts", "reference", "missing_slots"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[NMEK][0-9]{2,3}$", "description": "N = normal, M = missing info, E = no evidence, K = conflict"},
+    "type": {"enum": ["normal", "missing_info", "no_evidence", "conflict"]},
+    "expected_decision": {"enum": ["answer", "clarify", "escalate"]},
+    "ticket": {"type": "string", "minLength": 5, "description": "customer message, as written (may lack diacritics)"},
+    "gold_sections": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z0-9-]+#[a-z0-9-]+$"}, "description": "doc_id#section_id holding the evidence (the two conflicting sections for conflict tickets)"},
+    "key_facts": {"type": "array", "items": {"type": "string"}, "description": "facts a correct answer must contain"},
+    "reference": {"type": "string", "description": "reference answer or expected behaviour"},
+    "missing_slots": {"type": "array", "items": {"type": "string"}, "description": "information to ask for (missing_info tickets)"}
+  }
+}
