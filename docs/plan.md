@@ -15,8 +15,3 @@
 | 11 | FastAPI service, Streamlit UI, Docker; latency and cost measurements | Dockerised demo |
 | 12 | Final report, slides, demo | Report, slides, final code |
 
-**Language:** knowledge base, tickets and all user-facing outputs in Vietnamese; code and documentation in English.
-
-**Milestones:** knowledge base frozen at the end of week 3, labels frozen at the end of week 4, no prompt tuning on non-dev tickets after week 10.
-
-**Main risks:** biased synthetic data (mitigated by planted hard cases and varied ticket styles), API cost (cache every call, test on 20 tickets first), tuning on the test set (dev split).
