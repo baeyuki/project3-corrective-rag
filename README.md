@@ -5,6 +5,8 @@ An assistant for customer-support agents of a fictional Vietnamese electronics r
 ## Status
 
 - **Week 1:** survey of similar applications and related research, scope, data formats, feasibility checks: [docs/week1.md](docs/week1.md)
+- **Week 2:** 25-document Vietnamese knowledge base covering policies, procedures, FAQs and troubleshooting: [docs/week2.md](docs/week2.md)
+- Week-2 provenance, official web sources and controlled assumptions: [docs/week2_sources.md](docs/week2_sources.md)
 - Plan: [docs/plan.md](docs/plan.md)
 
 ## Setup
@@ -24,10 +26,10 @@ pytest -q
 
 ```
 docs/week1.md, plan.md        survey and plan
-data/kb/_TEMPLATE.md           knowledge-base document format
+data/kb/*.md                   knowledge-base documents and authoring template
 data/eval/ticket_schema.json   ticket label format (+ examples.jsonl)
 data/poc/                      toy corpus and queries for the feasibility checks
 src/rag_cskh/                  text.py (Vietnamese tokeniser), bm25.py
 scripts/                       check_env.py, poc_tokenization.py, poc_grading.py
-tests/                         data formats, tokeniser, BM25
+tests/                         data formats, knowledge base, tokeniser, BM25
 ```
