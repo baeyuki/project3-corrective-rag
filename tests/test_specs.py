@@ -31,7 +31,10 @@ def test_example_tickets_match_schema():
         assert set(r) == set(schema["required"])
         assert re.fullmatch(schema["properties"]["id"]["pattern"], r["id"])
         assert r["expected_decision"] == DECISION[r["type"]]
-        assert bool(r["gold_sections"]) == (r["type"] in {"normal", "conflict"})
+        if r["type"] in {"normal", "conflict"}:
+            assert r["gold_sections"]
+        if r["type"] == "no_evidence":
+            assert not r["gold_sections"]   # missing_info may cite the section that states the required information
         assert bool(r["missing_slots"]) == (r["type"] == "missing_info")
         if r["type"] == "conflict":
             assert len({s.split("#")[0] for s in r["gold_sections"]}) == 2   # two different documents

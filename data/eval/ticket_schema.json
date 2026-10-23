@@ -2,16 +2,99 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Labelled support ticket",
   "type": "object",
-  "required": ["id", "type", "expected_decision", "ticket", "gold_sections", "key_facts", "reference", "missing_slots"],
+  "required": [
+    "id",
+    "type",
+    "expected_decision",
+    "ticket",
+    "gold_sections",
+    "key_facts",
+    "reference",
+    "missing_slots"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": {"type": "string", "pattern": "^[NMEK][0-9]{2,3}$", "description": "N = normal, M = missing info, E = no evidence, K = conflict"},
-    "type": {"enum": ["normal", "missing_info", "no_evidence", "conflict"]},
-    "expected_decision": {"enum": ["answer", "clarify", "escalate"]},
-    "ticket": {"type": "string", "minLength": 5, "description": "customer message, as written (may lack diacritics)"},
-    "gold_sections": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z0-9-]+#[a-z0-9-]+$"}, "description": "doc_id#section_id holding the evidence (the two conflicting sections for conflict tickets)"},
-    "key_facts": {"type": "array", "items": {"type": "string"}, "description": "facts a correct answer must contain"},
-    "reference": {"type": "string", "description": "reference answer or expected behaviour"},
-    "missing_slots": {"type": "array", "items": {"type": "string"}, "description": "information to ask for (missing_info tickets)"}
+    "id": {
+      "type": "string",
+      "pattern": "^[NMEK][0-9]{2,3}$",
+      "description": "N = normal, M = missing info, E = no evidence, K = conflict; Week-4 tickets use three digits"
+    },
+    "type": {
+      "enum": [
+        "normal",
+        "missing_info",
+        "no_evidence",
+        "conflict"
+      ]
+    },
+    "expected_decision": {
+      "enum": [
+        "answer",
+        "clarify",
+        "escalate"
+      ]
+    },
+    "ticket": {
+      "type": "string",
+      "minLength": 5,
+      "description": "customer message, as written (may lack diacritics)"
+    },
+    "gold_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9-]+#[a-z0-9-]+$"
+      },
+      "description": "doc_id#section_id: evidence for normal tickets, both conflicting sections for conflict tickets, the section stating the required information for missing_info tickets; empty for no_evidence"
+    },
+    "key_facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "facts a correct answer must contain"
+    },
+    "reference": {
+      "type": "string",
+      "description": "reference answer or expected behaviour"
+    },
+    "missing_slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "information to ask for (missing_info tickets)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "no_diacritics",
+          "multi_doc",
+          "catalog",
+          "manufacturer",
+          "simulated",
+          "arithmetic",
+          "date_reasoning",
+          "near_miss",
+          "expired_trap",
+          "safety",
+          "email"
+        ]
+      },
+      "description": "difficulty and evidence tags (docs/week4_label_guide.md, section 5)"
+    },
+    "conflict_id": {
+      "type": "string",
+      "pattern": "^C[0-9]{2}$",
+      "description": "registered conflict in data/eval/kb_conflicts.json (conflict tickets only)"
+    },
+    "split": {
+      "enum": [
+        "dev",
+        "test"
+      ],
+      "description": "assigned by scripts/split_tickets.py"
+    }
   }
 }
