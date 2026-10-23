@@ -1,0 +1,205 @@
+{
+  "snapshot": "2026-10-22",
+  "description": "Registry of planted conflicts, the expired policy and compatible near-misses in data/kb. Week 4 tickets of type conflict must cite one of the 'conflict' pairs; near-misses are used for answerable tickets that look like conflicts.",
+  "conflicts": [
+    {
+      "id": "C01",
+      "topic": "Đổi do nhu cầu với hàng khuyến mãi",
+      "sections": [
+        "KM-THANG-10-2026#doi-tra",
+        "CS-DOI-TRA-2025#doi-do-nhu-cau"
+      ],
+      "rules": [
+        "15 ngày kể từ ngày giao, miễn phí đổi",
+        "7 ngày kể từ ngày giao, phí 10%"
+      ],
+      "applies_when": "Sản phẩm thuộc chương trình Tuần lễ điện máy, đặt từ 01/10/2026 đến 31/10/2026, đổi do nhu cầu",
+      "origin": "Phòng Marketing ban hành thể lệ không đối chiếu với chính sách đổi trả",
+      "probe_query": "mua tivi dot khuyen mai thang 10 doi tra do khong thich duoc may ngay"
+    },
+    {
+      "id": "C02",
+      "topic": "Ngưỡng miễn phí giao hàng",
+      "sections": [
+        "TB-GIAO-HANG-2026#mien-phi-giao-hang",
+        "CS-GIAO-HANG-2025#phi-giao-hang"
+      ],
+      "rules": [
+        "Đơn từ 300.000 đồng trong 10 km",
+        "Đơn từ 500.000 đồng trong 20 km"
+      ],
+      "applies_when": "Đơn từ 300.000 đến dưới 500.000 đồng, khoảng cách không quá 10 km",
+      "origin": "Thông báo vận hành chưa được cập nhật vào chính sách; bảng phí giao hàng tính 25.000 đồng cho đơn dưới 500.000 đồng trong 20 km nên cũng mâu thuẫn với thông báo",
+      "probe_query": "don 400 nghin cach cua hang 5 km co mien phi giao hang khong",
+      "also_conflicts_with": [
+        "BG-PHI-GIAO-HANG-2026#phi-theo-khoang-cach"
+      ]
+    },
+    {
+      "id": "C03",
+      "topic": "Giá trị đơn tối thiểu trả góp 0% qua thẻ tín dụng",
+      "sections": [
+        "FAQ-TRA-GOP-2026#dieu-kien-tra-gop-the",
+        "CS-TRA-GOP-2025#the-tin-dung"
+      ],
+      "rules": [
+        "Từ 2.000.000 đồng",
+        "Từ 3.000.000 đồng"
+      ],
+      "applies_when": "Đơn từ 2.000.000 đến dưới 3.000.000 đồng",
+      "origin": "FAQ mới của bộ phận trả góp lệch với chính sách",
+      "probe_query": "don 2 trieu 500 co tra gop 0% qua the tin dung duoc khong"
+    },
+    {
+      "id": "C04",
+      "topic": "Thời gian xử lý bảo hành và mượn máy",
+      "sections": [
+        "TB-BAO-HANH-2026#thoi-gian-xu-ly",
+        "CS-BAO-HANH-2025#thoi-gian-xu-ly"
+      ],
+      "rules": [
+        "Tối đa 10 ngày làm việc; mượn máy sau 10 ngày",
+        "Tối đa 15 ngày làm việc; mượn máy sau 15 ngày"
+      ],
+      "applies_when": "Mọi yêu cầu hỏi thời hạn xử lý hoặc quyền mượn máy từ ngày làm việc thứ 11 đến 15",
+      "origin": "Trung tâm bảo hành công bố cam kết mới trước khi chính sách được sửa",
+      "probe_query": "bao hanh mat bao lau, qua may ngay thi duoc muon may"
+    },
+    {
+      "id": "C05",
+      "topic": "Thời gian hoàn tiền",
+      "sections": [
+        "FAQ-HOAN-TIEN-2026#thoi-gian-hoan",
+        "CS-DOI-TRA-2025#hoan-tien"
+      ],
+      "rules": [
+        "3 đến 5 ngày làm việc",
+        "5 đến 10 ngày làm việc"
+      ],
+      "applies_when": "Mọi câu hỏi về thời gian nhận tiền hoàn sau khi yêu cầu được duyệt",
+      "origin": "FAQ của kế toán không đồng bộ với chính sách; FAQ-DOI-TRA-2025#thoi-gian-hoan vẫn ghi 5 đến 10 ngày",
+      "probe_query": "bao lau thi nhan duoc tien hoan",
+      "also_conflicts_with": [
+        "FAQ-DOI-TRA-2025#thoi-gian-hoan"
+      ]
+    },
+    {
+      "id": "C06",
+      "topic": "Vật tư lắp đặt máy lạnh",
+      "sections": [
+        "TB-LAP-DAT-2026#vat-tu-may-lanh",
+        "CS-GIAO-HANG-2025#lap-dat"
+      ],
+      "rules": [
+        "Miễn phí 3 m ống đồng và giá đỡ dàn nóng",
+        "Ống đồng, giá treo, dây điện báo giá riêng"
+      ],
+      "applies_when": "Khách hỏi chi phí ống đồng hoặc giá đỡ khi lắp máy lạnh",
+      "origin": "Phòng Kỹ thuật thay đổi định mức vật tư nhưng chính sách giao hàng và lắp đặt chưa sửa",
+      "probe_query": "lap may lanh co mien phi ong dong khong",
+      "supporting_sections": [
+        "BG-VAT-TU-LAP-DAT-2026#vat-tu-may-lanh"
+      ]
+    }
+  ],
+  "superseded": [
+    {
+      "id": "S01",
+      "expired": "CS-DOI-TRA-2024",
+      "active": "CS-DOI-TRA-2025",
+      "differences": [
+        "lỗi kỹ thuật: 15 ngày (2024) so với 30 ngày (2025)",
+        "đổi do nhu cầu: 10 ngày, phí 20%, không yêu cầu chưa kích hoạt (2024) so với 7 ngày, phí 10%, chưa kích hoạt bảo hành điện tử (2025)",
+        "hoàn tiền: 7 đến 14 ngày (2024) so với 5 đến 10 ngày làm việc (2025)"
+      ],
+      "expected_behaviour": "Không phải xung đột: dùng tài liệu đang hiệu lực, không trích dẫn tài liệu hết hiệu lực",
+      "probe_query": "doi do nhu cau trong bao nhieu ngay phi bao nhieu",
+      "sections": [
+        "CS-DOI-TRA-2024#doi-do-nhu-cau",
+        "CS-DOI-TRA-2025#doi-do-nhu-cau"
+      ]
+    }
+  ],
+  "compatible": [
+    {
+      "id": "N01",
+      "sections": [
+        "TB-GIAO-HANG-2026#mien-phi-giao-hang",
+        "CS-GIAO-HANG-2025#phi-giao-hang"
+      ],
+      "note": "Đơn từ 500.000 đồng trong 10 km: cả hai đều miễn phí; đơn từ 500.000 đồng ở 10-20 km: chỉ chính sách áp dụng, miễn phí"
+    },
+    {
+      "id": "N02",
+      "sections": [
+        "NSX-SAMSUNG-2026#thoi-han-san-pham",
+        "CS-BAO-HANH-2025#thoi-gian-xu-ly"
+      ],
+      "note": "Thời hạn bảo hành của hãng (24 tháng với TV) và thời gian xử lý của cửa hàng (15 ngày làm việc) là hai thuộc tính khác nhau"
+    },
+    {
+      "id": "N03",
+      "sections": [
+        "SP-MAY-LANH-2026#ftky25zvmv",
+        "NSX-DAIKIN-2026#thoi-han"
+      ],
+      "note": "Gói Premier Care tặng thêm 1 năm chỉ thuộc kênh Daikin E-Shop; thời hạn chuẩn vẫn là 12 tháng từ ngày lắp đặt"
+    },
+    {
+      "id": "N04",
+      "sections": [
+        "KM-THANG-10-2026#ket-hop-uu-dai",
+        "CS-TRA-GOP-2025#dieu-kien-don"
+      ],
+      "note": "Thể lệ khuyến mãi dẫn chiếu chính sách trả góp, không đặt ngưỡng riêng"
+    },
+    {
+      "id": "N05",
+      "sections": [
+        "SP-TV-SAMSUNG-2026#dai-san-pham-2026",
+        "NSX-SAMSUNG-2026#thoi-han-san-pham"
+      ],
+      "note": "Ưu đãi tặng bảo hành 3 năm đã kết thúc 30/06/2026; thời hạn chuẩn của TV là 24 tháng"
+    },
+    {
+      "id": "N06",
+      "sections": [
+        "NSX-PANASONIC-2026#ngay-bat-dau",
+        "CS-DOI-TRA-2025#doi-do-nhu-cau"
+      ],
+      "note": "Kích hoạt bảo hành điện tử kéo dài thời hạn linh kiện nhưng làm mất điều kiện đổi do nhu cầu; hai tài liệu nhất quán và cần suy luận kết hợp"
+    },
+    {
+      "id": "N07",
+      "sections": [
+        "QT-SU-CO-AN-TOAN-2026#ghi-nhan-chuyen-cap",
+        "CS-KHIEU-NAI-2025#thoi-han-phan-hoi"
+      ],
+      "note": "Sự cố an toàn: quản lý liên hệ trong 4 giờ làm việc, chặt hơn và nằm trong mức xác nhận 1 ngày làm việc của chính sách khiếu nại"
+    },
+    {
+      "id": "N08",
+      "sections": [
+        "CS-THANH-VIEN-2026#tich-diem",
+        "KM-THANG-10-2026#doi-tra"
+      ],
+      "note": "Điểm cộng sau 7 ngày; hàng khuyến mãi còn đổi được đến ngày 15 thì điểm bị thu hồi theo CS-THANH-VIEN-2026#han-dung-thu-hoi"
+    },
+    {
+      "id": "N09",
+      "sections": [
+        "QT-KHACH-DOANH-NGHIEP-2026#thanh-toan",
+        "CS-THANH-TOAN-2025#cod"
+      ],
+      "note": "Đơn doanh nghiệp không dùng thanh toán khi nhận hàng là quy định riêng cho phạm vi hẹp hơn, không mâu thuẫn với ngưỡng COD 20 triệu của đơn bán lẻ"
+    },
+    {
+      "id": "N10",
+      "sections": [
+        "BG-PHI-GIAO-HANG-2026#phi-theo-khoang-cach",
+        "CS-GIAO-HANG-2025#phi-giao-hang"
+      ],
+      "note": "Đơn từ 500.000 đồng ở 20-40 km: chính sách nói ngoài phạm vi miễn phí thì có phí, bảng phí cho số tiền 60.000 đồng"
+    }
+  ]
+}

@@ -10,8 +10,17 @@ source_refs: SRC-EXAMPLE-1, SRC-EXAMPLE-2
 
 <!--
 Format of a knowledge-base document (files starting with "_" are not indexed):
-- front matter: doc_id, title, category, status (active | expired), effective_date, provenance, source_refs
-- provenance is synthetic-derived or operational-synthesis; source_refs resolve in docs/week2_sources.md
+- required front matter: doc_id, title, category, status (active | expired), effective_date, provenance, source_refs
+- category: policy | procedure | faq | troubleshooting | catalog | manufacturer | promotion | notice
+  | pricelist | directory
+- optional: expiry_date (last valid day), superseded_by (expired documents), variant_of (planted conflicts),
+  owner (issuing department), brand (catalog and manufacturer documents)
+- provenance: synthetic-derived | operational-synthesis | source-extracted (facts read from an official page)
+  | controlled-variant (expired policy or planted conflict) | simulated (internal operating data
+  calibrated on public references, must cite SRC-SIM-RULES); source_refs resolve in docs/week2_sources.md
+  or docs/week3_sources.md
+- catalog documents start with a "pham-vi" section; one product model per "##" section; a value the
+  official page does not publish is written as missing, never estimated
 - every "##" section has a fixed id {#...}; gold labels point to doc_id#section-id, so ids never change
 - one topic per section, every rule stated with concrete numbers
 - document content is in Vietnamese
