@@ -15,3 +15,7 @@
 | 11 | FastAPI service, Streamlit UI, Docker; latency and cost measurements | Dockerised demo |
 | 12 | Final report, slides, demo | Report, slides, final code |
 
+## Revisions
+
+- **Week 3 (2026-10-22):** document target exceeded (63, of which 13 simulated operating documents). The chunk estimate of 1,000-1,500 is replaced by measured values: 275 sections, 304 chunks at the default 120-word limit, 364 at 60 words. Product data are taken only from official manufacturer pages, so the corpus is not padded to reach a chunk count; see [week3.md](week3.md), section 4.
+- **Week 4 (2026-10-22):** 168 tickets instead of ~150, so that missing_info, no_evidence and conflict each have at least 20 tickets while normal tickets stay the majority (55%). Dev split: 51 tickets (30% per type, grouped by evidence and by conflict).
