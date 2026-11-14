@@ -1,0 +1,5 @@
+# Optional: local cross-encoder reranker (scripts/eval_rerank.py --rerankers llm,ce)
+# GPU users: install the CUDA build of torch first (https://pytorch.org/get-started/locally/)
+sentence-transformers>=3.0
+torch>=2.1
+pyvi>=0.1.1             # only for --ce-model phoranker
